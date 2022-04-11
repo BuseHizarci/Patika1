@@ -11,28 +11,36 @@ function App() {
     console.log("Hello" + label);
   }
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
-       <Text>Css styling</Text>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.upper_view_container}>
+      <Text>First style</Text>
       </View>
-  
+      <View style={styles.bottom_view_container}><Text>Second is bigger than first one</Text></View>
+
       <Button title="Press Me!" onPress={() => sayHello('Buse')} />
     </SafeAreaView>
 
   )
 }
 const styles = StyleSheet.create({
-  upper_view-container : { 
+  container:{
+    flex:1,
+  },
+  //Eger bir flex yapisi kullanacaksak ve deger verdiysek disindaki DIV e de flex belirtmek zorundayiz.
+  // Distakine yer vermiyorsun ki icindekine yer veriyorsun. Bu dogru bir kullanim olmaz
+  upper_view_container : { 
+    flex:100,
     backgroundColor: 'red',
     margin: 10,
     padding:10,
     borderRadius:5,
-  }
-  bottom_view-container : { 
+  },
+  bottom_view_container : { 
+    flex:300,
     backgroundColor: 'blue',
+    margin: 10,
+    padding:10,
+    borderRadius:5,
   }
 })
 export default App;
-//View coponenti default olarak childi kadar yer kaplar.
-// En cok kullandigimiz View componentidir.
-//px gerekli degil 10 brim olur.
