@@ -1,26 +1,38 @@
 import React from 'react'
-import {View , Text , SafeAreaView } from 'react-native';
+import { View, Text, SafeAreaView, Button , StyleSheet} from 'react-native';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 //React native bir proje olusturdugumda React Native mimarisi olan bir Node.js insaa ederiz //
 
 //View Web'deki div e karsilik gelir
 // Text <p> tagine karsilik gelir
 
-function App () {
-  return(
+function App() {
+  const sayHello=(label)=> {
+    console.log("Hello" + label);
+  }
+  return (
     <SafeAreaView>
-    <View>
-      <Text>
-        Hello React Native World! 01.04.2022 London- UK
-      </Text>
-      <Text> Text 2 - Text2'te bu View in childi oluyor.</Text>
-    </View>
-    <Text> View in icinde olmayan bir text
-    </Text>
+      <View style={styles.container}>
+       <Text>Css styling</Text>
+      </View>
+  
+      <Button title="Press Me!" onPress={() => sayHello('Buse')} />
     </SafeAreaView>
-    
+
   )
 }
+const styles = StyleSheet.create({
+  upper_view-container : { 
+    backgroundColor: 'red',
+    margin: 10,
+    padding:10,
+    borderRadius:5,
+  }
+  bottom_view-container : { 
+    backgroundColor: 'blue',
+  }
+})
 export default App;
-//Text2'te bu View in childi oluyor.
-//Sentetic sugar :
-// Export - Default = Fonksiyon olusturup App diyerek gonderiyorum. Bu index.js dosyamda kullaniliyor. 
+//View coponenti default olarak childi kadar yer kaplar.
+// En cok kullandigimiz View componentidir.
+//px gerekli degil 10 brim olur.
