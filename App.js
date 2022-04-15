@@ -10,11 +10,12 @@ function App() {
   
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.box_1}><Text>Eroooo</Text></View>
-      <View style={styles.box_2}><Text>Busooo</Text></View>
-      <View style={styles.box_3}><Text>Nabo</Text></View>
-      <View style={styles.box_4}></View>
-     
+     <View style={styles.card_container}> 
+     <View style={styles.card_body}>
+         <Text style={styles.card_title}>Edard Stark</Text>
+         <Text style={styles.card_text}>Winter is Coming</Text>
+    </View>
+    </View>
     </SafeAreaView>
 
   )
@@ -22,46 +23,28 @@ function App() {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    flexDirection:'column',
     backgroundColor:'grey',
-    justifyContent:'space-around'
+    borderRadius:4,
   },
-  box_1: {  
-    flex:100,
-    backgroundColor: 'blue',
-    margin: 10,
-    padding:10,
+  card_container:{
+    backgroundColor:'white',
+    borderWidth:4,
     borderRadius:5,
-    width:30,
-    height:30,
   },
-  box_2: { 
-    flex:100,
-    backgroundColor: 'aqua',
-    margin: 10,
-    padding:10,
-    borderRadius:5,
-    width:30,
-    height:30,
+  card_body: {
+    padding:50,
   },
-  box_3: { 
-    flex:100,
-    backgroundColor: 'red',
-    margin: 10,
-    padding:10,
-    borderRadius:5,
-    width:30,
-    height:30,
+  card_title: {
+    fontSize:20,
+    fontWeight:'bold',
+    margin:10,
+    alignItems:'center',
   },
-  box_4: { 
-    flex:100,
-    backgroundColor: 'orange',
-    margin: 10,
-    padding:10,
-    borderRadius:5,
-    width:30,
-    height:30,
-  },
+  card_text:{
+    margin:5,
+    alignItems:'center',
+  }
+  
 
 })
 export default App;
