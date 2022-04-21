@@ -3,12 +3,6 @@ import { View, Text, SafeAreaView, Button , StyleSheet, TouchableOpacity} from '
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import Card from './components/Card/Card'
 
-
-//Prop gondermek icin :  Erisecegin yer props -> Card.js 
-// Ben en altta karti cagirip titlei belirliyorum
-//Mainde title belirle gonder
-
-
 function App() {
   return (
     <SafeAreaView style={styles.container}>
