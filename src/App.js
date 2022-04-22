@@ -1,22 +1,27 @@
 import React from 'react'
-import { View, Text, SafeAreaView, Button , StyleSheet, TouchableOpacity} from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-import Card from './components/Card/Card'
+import { SafeAreaView , FlatList , View , Text} from 'react-native'
+import NewsCard from './components/NewsCard'
+import news_data from './news_data.json'
 
-function App() {
+const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
-    <Card title="Arif ISIK" text="Uzaylilar Tarafindan Kacirildim"/>
-    <Card title="Serbest" text="Ilhami abi sen soyle"/>
-    <Card title="Eddard 3" text="Winter is coming.."/>
+    <SafeAreaView>
+        <View>
+        <FlatList          
+            data={news_data}
+            renderItem={({item}) => < NewsCard news={item} />}
+            />
+        </View>
     </SafeAreaView>
-
   )
 }
-const styles = StyleSheet.create({
-  container:{
-    flex:1,
-    backgroundColor:'grey',
-  }
-})
-export default App;
+
+export default App 
+//Bir data Json - Array bir de render item olmasi gerek
+//renderItem ozel bir yapi callback funstion
+//Bana data donuyor ekrana basacagi verileri tutuyor.
+//Json objemden parcalayarak item cektim. surekli data.item dememek icin
+//Her bir eleman item istedigin herhangi bir isimle donebilir.
+// Custom component propu istedigim isim olur <Newscard news={}
+
+
