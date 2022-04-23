@@ -7,7 +7,8 @@ const App = () => {
   return (
     <SafeAreaView>
         <View>
-        <FlatList          
+        <FlatList   
+           keyExtractor={(item,index) => item.u_id.toString}       
             data={news_data}
             renderItem={({item}) => < NewsCard news={item} />}
             />
@@ -23,5 +24,11 @@ export default App
 //Json objemden parcalayarak item cektim. surekli data.item dememek icin
 //Her bir eleman item istedigin herhangi bir isimle donebilir.
 // Custom component propu istedigim isim olur <Newscard news={}
+//100-105 arasindakini gosteriyor ustte bes altta bes hazir bekliyor.
+//190 load olmad
+//2. de yuklerim 180. de yuklerim ama bunu nasil bilecegim ? 
+//Key e ihtiyacim var diyor.  
+//Bende ID otomatik ver onu direk hafizaya amis oluyor.
+//
 
 

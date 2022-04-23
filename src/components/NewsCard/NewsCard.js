@@ -11,6 +11,7 @@ const NewsCard = ({news}) => {
             <View style={styles.inner_container}>
               <Text style={styles.title}>{news.title}</Text>
             <Text style={styles.description}>{news.description}</Text>
+            <Text style={styles.author}>{news.author}</Text>
             </View>
         </View>
     </SafeAreaView>
