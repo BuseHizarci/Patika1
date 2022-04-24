@@ -2,7 +2,7 @@ import { Dimensions, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'lightpink',
+        backgroundColor: 'white',
         margin:10,
         borderRadius:10,
         shadowOpacity:20,
@@ -17,11 +17,15 @@ const styles = StyleSheet.create({
         
         fontStyle:'italic',
         textAlign: 'right',
+    },
+    bannerImage :{
+        height: Dimensions.get('window').height / 5,
+        width:Dimensions.get('window').width / 2,
+    },
+    headerText:{
+        fontWeight:'bold',
+        fontSize:50,
+        
     }
-
 })
 export default styles;
-//100-105 arasindakini gosteriyor ustte bes altta bes hazir bekliyor.
-//190 load olmad
-//2. de yuklerim 180. de yuklerim ama bunu nasil bilecegim ? 
-//Key e ihtiyacim var diyor.  
